@@ -1,0 +1,28 @@
+plugins {
+    id 'java'
+}
+
+group = 'com.ejemplo'
+version = '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'com.sun.xml.ws:jaxws-rt:2.3.3'
+    implementation 'com.sun.xml.ws:jaxws-tools:2.3.3'
+}
+
+jar {
+    manifest {
+        attributes 'Main-Class': 'org.example.Main'
+    }
+}
+
+tasks.register('run', JavaExec) {
+    main = 'org.example.Main'
+    classpath = sourceSets.main.runtimeClasspath
+}
