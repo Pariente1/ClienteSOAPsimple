@@ -1,11 +1,8 @@
 package org.example;
 
 import com.dataaccess.webservicesserver.NumberConversionSoapType;
-import com.dataaccess.webservicesserver.NumberToWords;
 import javax.xml.namespace.QName;
 import javax.xml.ws.Service;
-import java.io.File;
-import java.io.IOException;
 import java.math.BigInteger;
 import java.net.URL;
 
